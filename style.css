@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#4d8fe2,#41e5d9, #4d8fe2);
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 40rem;
+    background: #FFF;
+    border-radius: .8rem;
+    padding: 3.2rem 2.4rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin: 0 0 1.6rem;
+}
+
+#create-todo-section {
+    width: 100%;
+}
+
+#create-todo-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.input-description {
+    font-size: 1.6rem;
+    height: 3.2rem;
+    width: 100%;
+    border: 1px solid #646464;
+    border-radius: .4rem;
+    padding-left: .8rem;
+    margin-right: .4rem;
+    outline: none;
+    &:focus {
+        border: 1px solid #5eb7f6;
+    }
+}
+
+.add-task-btn {
+    font-size: 2.4rem;
+    box-sizing: border-box;
+    height: 3.6rem;
+    width: 3.6rem;
+    color: #FFF;
+    background: #8f49e7;
+    border: none;
+    border-radius: .4rem;
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background: #d9d9d9;
+    }
+}
+
+.todo-list-section {
+    margin: 0.8rem 0 1.6rem;
+    min-height: 5rem;
+    & > ul {
+        padding-inline-start: 0;
+        height: 23rem;
+        overflow: auto;
+    }
+    & > ul > li {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        background: #efefef;
+        list-style-type: none;
+        padding: .8rem 1.6rem;
+        margin-bottom: .8rem;
+    }
+    & > ul > li:last-child {
+        margin: 0;
+    }
+    & > ul > li > button {
+        height: 2.4rem;
+        width: 2.4rem;
+        background: #e64c3c;
+        color: #FFF;
+        border: none;
+        border-radius: .4rem;
+        & :hover {
+            cursor: pointer;
+            background: #da5c3e;
+        }
+    }
+}
+.checkbox-label-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > label {
+        cursor: pointer;
+    }
+    & > input {
+        cursor: pointer;
+        margin-right: .8rem;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.remove-done-tasks-btn {
+    box-sizing: border-box;
+    height: 3.6rem;
+    color: #FFF;
+    background: #8f49e7;
+    border: none;
+    border-radius: .4rem;
+    padding: 0 1.6rem;
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
